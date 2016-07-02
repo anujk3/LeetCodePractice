@@ -5,11 +5,8 @@ class Solution(object):
         :rtype: void Do not return anything, modify nums in-place instead.
         """
         
-        notzero = 0
-        for i in nums:
-            if i != 0:
-                nums[notzero] = i
-                notzero += 1
-        
-        for i in xrange(notzero, len(nums)):
-            nums[i] = 0
+        zero_index = 0
+        for i in range(len(nums)):
+            if nums[i] != 0 :
+                nums[i], nums[zero_index] = nums[zero_index], nums[i]
+                zero_index += 1
