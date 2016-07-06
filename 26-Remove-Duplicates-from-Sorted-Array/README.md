@@ -1,0 +1,1 @@
+Just keep a check of the unique elements in the array and keep moving them forward
